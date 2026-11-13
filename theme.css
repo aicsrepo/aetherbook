@@ -1,10 +1,28 @@
 html.aetherbook-theme {
   color-scheme: var(--aether-scheme);
+  --primary-text: var(--aether-text) !important;
+  --secondary-text: color-mix(in srgb, var(--aether-text) 68%, transparent) !important;
+  --web-wash: var(--aether-page) !important;
+  --surface-background: var(--aether-surface) !important;
+  --card-background: var(--aether-surface) !important;
+  --comment-background: var(--aether-page) !important;
+  --divider: color-mix(in srgb, var(--aether-text) 16%, transparent) !important;
+  --text-link: var(--aether-accent) !important;
+  --accent: var(--aether-accent) !important;
+  --primary-button-background: var(--aether-accent) !important;
+  --input-background: var(--aether-surface) !important;
 }
 
 html.aetherbook-theme body {
   background-color: var(--aether-page) !important;
   color: var(--aether-text) !important;
+}
+
+html.aetherbook-theme body *,
+html.aetherbook-theme body *::before,
+html.aetherbook-theme body *::after {
+  color: var(--aether-text) !important;
+  border-color: color-mix(in srgb, var(--aether-text) 18%, transparent) !important;
 }
 
 html.aetherbook-theme body a {
@@ -25,13 +43,17 @@ html.aetherbook-theme [data-pagelet="ProfileTimeline"] {
 }
 
 html.aetherbook-theme [role="navigation"],
-html.aetherbook-theme [role="complementary"] {
+html.aetherbook-theme [role="complementary"],
+html.aetherbook-theme [role="tabpanel"] {
   background-color: var(--aether-surface) !important;
   color: var(--aether-text) !important;
 }
 
 html.aetherbook-theme input,
 html.aetherbook-theme textarea,
+html.aetherbook-theme select,
+html.aetherbook-theme button,
+html.aetherbook-theme [role="button"],
 html.aetherbook-theme [contenteditable="true"] {
   background-color: var(--aether-surface) !important;
   border-color: color-mix(in srgb, var(--aether-text) 22%, transparent) !important;
@@ -85,6 +107,14 @@ html.aetherbook-nebula body {
   background: transparent !important;
 }
 
+html.aetherbook-nebula body > div,
+html.aetherbook-nebula body [role="application"],
+html.aetherbook-nebula body [role="main"],
+html.aetherbook-nebula body [role="feed"],
+html.aetherbook-nebula body [data-pagelet] {
+  background-color: transparent !important;
+}
+
 html.aetherbook-nebula body::before {
   position: fixed;
   z-index: -1;
@@ -106,14 +136,26 @@ html.aetherbook-nebula [data-pagelet="MainFeed"] {
   background: transparent !important;
 }
 
-html.aetherbook-nebula [role="article"],
-html.aetherbook-nebula [data-pagelet^="FeedUnit_"] {
+html.aetherbook-nebula body [role="article"],
+html.aetherbook-nebula body [role="dialog"],
+html.aetherbook-nebula body [role="menu"],
+html.aetherbook-nebula body [role="listbox"],
+html.aetherbook-nebula body [role="alertdialog"],
+html.aetherbook-nebula body [role="tabpanel"],
+html.aetherbook-nebula body [role="button"],
+html.aetherbook-nebula body button,
+html.aetherbook-nebula body input,
+html.aetherbook-nebula body textarea,
+html.aetherbook-nebula body select,
+html.aetherbook-nebula body [contenteditable="true"],
+html.aetherbook-nebula body [data-pagelet^="FeedUnit_"],
+html.aetherbook-nebula body [data-pagelet="ProfileTimeline"] {
   background-color: color-mix(in srgb, var(--aether-surface) 86%, transparent) !important;
   backdrop-filter: blur(12px);
 }
 
-html.aetherbook-nebula [role="navigation"],
-html.aetherbook-nebula [role="complementary"] {
+html.aetherbook-nebula body [role="navigation"],
+html.aetherbook-nebula body [role="complementary"] {
   background-color: color-mix(in srgb, var(--aether-surface) 92%, transparent) !important;
   backdrop-filter: blur(12px);
 }
