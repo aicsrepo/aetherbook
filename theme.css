@@ -1,0 +1,136 @@
+html.aetherbook-theme {
+  color-scheme: var(--aether-scheme);
+}
+
+html.aetherbook-theme body {
+  background-color: var(--aether-page) !important;
+  color: var(--aether-text) !important;
+}
+
+html.aetherbook-theme body a {
+  color: var(--aether-accent) !important;
+}
+
+html.aetherbook-theme [role="article"],
+html.aetherbook-theme [role="dialog"],
+html.aetherbook-theme [role="menu"],
+html.aetherbook-theme [role="listbox"],
+html.aetherbook-theme [role="alertdialog"],
+html.aetherbook-theme [data-pagelet^="FeedUnit_"],
+html.aetherbook-theme [data-pagelet="MainFeed"],
+html.aetherbook-theme [data-pagelet="ProfileTimeline"] {
+  background-color: var(--aether-surface) !important;
+  border-color: color-mix(in srgb, var(--aether-text) 14%, transparent) !important;
+  color: var(--aether-text) !important;
+}
+
+html.aetherbook-theme [role="navigation"],
+html.aetherbook-theme [role="complementary"] {
+  background-color: var(--aether-surface) !important;
+  color: var(--aether-text) !important;
+}
+
+html.aetherbook-theme input,
+html.aetherbook-theme textarea,
+html.aetherbook-theme [contenteditable="true"] {
+  background-color: var(--aether-surface) !important;
+  border-color: color-mix(in srgb, var(--aether-text) 22%, transparent) !important;
+  color: var(--aether-text) !important;
+}
+
+html.aetherbook-theme input::placeholder,
+html.aetherbook-theme textarea::placeholder {
+  color: color-mix(in srgb, var(--aether-text) 62%, transparent) !important;
+}
+
+html.aetherbook-theme [role="button"]:hover,
+html.aetherbook-theme button:hover {
+  background-color: color-mix(in srgb, var(--aether-accent) 12%, var(--aether-surface)) !important;
+}
+
+html.aetherbook-twitter body {
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+html.aetherbook-twitter [role="article"],
+html.aetherbook-twitter [data-pagelet^="FeedUnit_"] {
+  border: 0 !important;
+  border-bottom: 1px solid color-mix(in srgb, var(--aether-text) 14%, transparent) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+html.aetherbook-twitter [role="navigation"],
+html.aetherbook-twitter [role="complementary"] {
+  border-color: color-mix(in srgb, var(--aether-text) 14%, transparent) !important;
+  box-shadow: none !important;
+}
+
+html.aetherbook-twitter [role="button"],
+html.aetherbook-twitter button {
+  border-radius: 999px !important;
+}
+
+html.aetherbook-twitter [role="tab"][aria-selected="true"] {
+  border-bottom: 2px solid var(--aether-accent) !important;
+}
+
+html.aetherbook-nebula {
+  background: #090b18 !important;
+}
+
+html.aetherbook-nebula body {
+  position: relative;
+  isolation: isolate;
+  background: transparent !important;
+}
+
+html.aetherbook-nebula body::before {
+  position: fixed;
+  z-index: -1;
+  inset: -8%;
+  background:
+    radial-gradient(ellipse at 18% 30%, color-mix(in srgb, var(--aether-nebula) 75%, #f5c5ff) 0%, transparent 38%),
+    radial-gradient(ellipse at 78% 68%, color-mix(in srgb, var(--aether-nebula) 72%, #112c64) 0%, transparent 43%),
+    radial-gradient(ellipse at 48% 12%, color-mix(in srgb, var(--aether-nebula) 44%, #df5caa) 0%, transparent 36%),
+    linear-gradient(135deg, #080b19, #11152b 55%, #090b18);
+  background-size: 150% 150%;
+  content: "";
+  pointer-events: none;
+  animation: aetherbook-nebula-drift 38s ease-in-out infinite alternate;
+}
+
+html.aetherbook-nebula [role="main"],
+html.aetherbook-nebula [role="feed"],
+html.aetherbook-nebula [data-pagelet="MainFeed"] {
+  background: transparent !important;
+}
+
+html.aetherbook-nebula [role="article"],
+html.aetherbook-nebula [data-pagelet^="FeedUnit_"] {
+  background-color: color-mix(in srgb, var(--aether-surface) 86%, transparent) !important;
+  backdrop-filter: blur(12px);
+}
+
+html.aetherbook-nebula [role="navigation"],
+html.aetherbook-nebula [role="complementary"] {
+  background-color: color-mix(in srgb, var(--aether-surface) 92%, transparent) !important;
+  backdrop-filter: blur(12px);
+}
+
+@keyframes aetherbook-nebula-drift {
+  from {
+    background-position: 0% 50%;
+    transform: scale(1);
+  }
+  to {
+    background-position: 100% 50%;
+    transform: scale(1.08);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.aetherbook-nebula body::before {
+    animation: none;
+  }
+}

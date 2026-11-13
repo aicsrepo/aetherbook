@@ -1,0 +1,148 @@
+:root {
+  color-scheme: light;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #25233a;
+  background: #f7f5fb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 320px;
+  margin: 0;
+}
+
+main {
+  padding: 20px;
+}
+
+header {
+  margin-bottom: 18px;
+}
+
+.eyebrow {
+  margin: 0 0 5px;
+  color: #7653a6;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 0.12em;
+}
+
+h1 {
+  margin: 0;
+  font-size: 19px;
+  line-height: 1.25;
+}
+
+.description {
+  margin: 6px 0 0;
+  color: #686477;
+  font-size: 12px;
+}
+
+.toggle-row,
+.field,
+.color-field {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toggle-row {
+  padding: 12px;
+  border: 1px solid #e6e1ef;
+  border-radius: 12px;
+  background: white;
+}
+
+.wallpaper-row {
+  margin-top: 8px;
+}
+
+.wallpaper-color {
+  margin-top: 8px;
+}
+
+.toggle-row strong,
+.toggle-row small {
+  display: block;
+}
+
+.toggle-row strong,
+.field-title {
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.toggle-row small {
+  margin-top: 3px;
+  color: #777286;
+  font-size: 11px;
+}
+
+input[type="checkbox"] {
+  width: 17px;
+  height: 17px;
+  accent-color: #7653a6;
+}
+
+.field {
+  margin: 17px 0 10px;
+}
+
+select {
+  width: 145px;
+  padding: 7px 9px;
+  border: 1px solid #ddd7e8;
+  border-radius: 8px;
+  background: white;
+  color: inherit;
+  font: inherit;
+  font-size: 12px;
+}
+
+#custom-colors {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 8px 0 2px;
+}
+
+#custom-colors[hidden] {
+  display: none;
+}
+
+.color-field {
+  min-height: 39px;
+  padding: 6px 9px;
+  border: 1px solid #e6e1ef;
+  border-radius: 9px;
+  background: white;
+  color: #5a5668;
+  font-size: 12px;
+}
+
+input[type="color"] {
+  width: 26px;
+  height: 25px;
+  padding: 1px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+#status {
+  min-height: 16px;
+  margin: 10px 0 0;
+  color: #526f58;
+  font-size: 11px;
+}
+
+footer {
+  padding-top: 10px;
+  border-top: 1px solid #e6e1ef;
+  color: #777286;
+  font-size: 10px;
+}

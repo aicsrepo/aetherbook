@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Aetherbook Themes",
+  "version": "0.1.0",
+  "description": "Restyle Facebook and add a customizable nebula wallpaper.",
+  "permissions": ["storage"],
+  "host_permissions": ["https://www.facebook.com/*", "https://facebook.com/*"],
+  "action": {
+    "default_title": "Aetherbook Themes",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.facebook.com/*", "https://facebook.com/*"],
+      "css": ["theme.css"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
