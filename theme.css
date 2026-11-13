@@ -23,6 +23,11 @@ html.aetherbook-theme {
   --hover-overlay: color-mix(in srgb, var(--aether-accent) 12%, transparent) !important;
   --input-background: var(--aether-surface) !important;
   --highlight-bg: color-mix(in srgb, var(--aether-accent) 12%, var(--aether-surface)) !important;
+  --messenger-card-background: var(--aether-surface) !important;
+  --messenger-card-background-elevated: var(--aether-surface) !important;
+  --chat-bubble-background: var(--aether-surface) !important;
+  --incoming-message-background: var(--aether-surface) !important;
+  --outgoing-message-background: color-mix(in srgb, var(--aether-accent) 28%, var(--aether-surface)) !important;
 }
 
 html.aetherbook-theme body {
@@ -56,6 +61,11 @@ html.aetherbook-theme body *::after {
   --hover-overlay: color-mix(in srgb, var(--aether-accent) 12%, transparent) !important;
   --input-background: var(--aether-surface) !important;
   --highlight-bg: color-mix(in srgb, var(--aether-accent) 12%, var(--aether-surface)) !important;
+  --messenger-card-background: var(--aether-surface) !important;
+  --messenger-card-background-elevated: var(--aether-surface) !important;
+  --chat-bubble-background: var(--aether-surface) !important;
+  --incoming-message-background: var(--aether-surface) !important;
+  --outgoing-message-background: color-mix(in srgb, var(--aether-accent) 28%, var(--aether-surface)) !important;
   color: var(--aether-text) !important;
   border-color: color-mix(in srgb, var(--aether-text) 18%, transparent) !important;
 }
@@ -103,6 +113,13 @@ html.aetherbook-theme [role="navigation"],
 html.aetherbook-theme [role="complementary"],
 html.aetherbook-theme [role="tabpanel"] {
   background-color: var(--aether-surface) !important;
+  color: var(--aether-text) !important;
+}
+
+html.aetherbook-theme [role="log"],
+html.aetherbook-theme [aria-label*="Thread composer"] {
+  background-color: var(--aether-surface) !important;
+  border-color: color-mix(in srgb, var(--aether-text) 18%, transparent) !important;
   color: var(--aether-text) !important;
 }
 
