@@ -226,3 +226,76 @@ html.aetherbook-nebula body [contenteditable="true"] {
     animation: none;
   }
 }
+
+html.aetherbook-theme body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+html.aetherbook-theme [role="article"],
+html.aetherbook-theme [role="dialog"],
+html.aetherbook-theme [role="menu"],
+html.aetherbook-theme [role="listbox"],
+html.aetherbook-theme [role="alertdialog"],
+html.aetherbook-theme [role="tabpanel"],
+html.aetherbook-theme [data-pagelet^="FeedUnit_"],
+html.aetherbook-theme [data-pagelet="ProfileTimeline"] {
+  border: 1px solid color-mix(in srgb, var(--aether-text) 10%, transparent) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 10px 30px rgb(0 0 0 / 8%) !important;
+}
+
+html.aetherbook-theme [role="navigation"],
+html.aetherbook-theme [role="complementary"] {
+  border-radius: 18px !important;
+}
+
+html.aetherbook-theme button,
+html.aetherbook-theme [role="button"] {
+  border-radius: 999px !important;
+  transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease !important;
+}
+
+html.aetherbook-theme button:not(:disabled):hover,
+html.aetherbook-theme [role="button"]:hover {
+  background-color: color-mix(in srgb, var(--aether-accent) 14%, var(--aether-surface)) !important;
+}
+
+html.aetherbook-theme input,
+html.aetherbook-theme textarea,
+html.aetherbook-theme select,
+html.aetherbook-theme [contenteditable="true"] {
+  border-radius: 12px !important;
+  transition: border-color 160ms ease, box-shadow 160ms ease !important;
+}
+
+html.aetherbook-theme :is(input, textarea, select, [contenteditable="true"]):focus-visible,
+html.aetherbook-theme :is(button, [role="button"], a):focus-visible {
+  outline: 2px solid var(--aether-accent) !important;
+  outline-offset: 2px !important;
+}
+
+html.aetherbook-theme [role="tab"][aria-selected="true"] {
+  border-radius: 999px !important;
+  background-color: color-mix(in srgb, var(--aether-accent) 14%, var(--aether-surface)) !important;
+}
+
+html.aetherbook-theme a {
+  text-decoration: none;
+}
+
+html.aetherbook-theme a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.aetherbook-theme button,
+  html.aetherbook-theme [role="button"],
+  html.aetherbook-theme input,
+  html.aetherbook-theme textarea,
+  html.aetherbook-theme select,
+  html.aetherbook-theme [contenteditable="true"] {
+    transition: none !important;
+  }
+}
