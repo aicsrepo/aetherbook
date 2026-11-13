@@ -14,10 +14,10 @@ const PALETTES = {
     scheme: "light"
   },
   futuristic: {
-    page: "#070b16",
-    surface: "#0d1424",
-    text: "#dcecff",
-    accent: "#56e7ff",
+    page: "#121821",
+    surface: "#1c2735",
+    text: "#e4edf5",
+    accent: "#66b8c5",
     scheme: "dark"
   },
   midnight: {

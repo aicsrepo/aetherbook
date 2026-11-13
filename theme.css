@@ -2,15 +2,27 @@ html.aetherbook-theme {
   color-scheme: var(--aether-scheme);
   --primary-text: var(--aether-text) !important;
   --secondary-text: color-mix(in srgb, var(--aether-text) 68%, transparent) !important;
+  --primary-icon: var(--aether-text) !important;
+  --secondary-icon: color-mix(in srgb, var(--aether-text) 68%, transparent) !important;
   --web-wash: var(--aether-page) !important;
+  --wash: var(--aether-page) !important;
+  --nav-bar-background: var(--aether-surface) !important;
   --surface-background: var(--aether-surface) !important;
   --card-background: var(--aether-surface) !important;
+  --dialog-background: var(--aether-surface) !important;
+  --popover-background: var(--aether-surface) !important;
+  --attachment-footer-background: var(--aether-surface) !important;
   --comment-background: var(--aether-page) !important;
+  --placeholder-text: color-mix(in srgb, var(--aether-text) 62%, transparent) !important;
   --divider: color-mix(in srgb, var(--aether-text) 16%, transparent) !important;
   --text-link: var(--aether-accent) !important;
   --accent: var(--aether-accent) !important;
   --primary-button-background: var(--aether-accent) !important;
+  --secondary-button-background: var(--aether-surface) !important;
+  --button-background: var(--aether-surface) !important;
+  --hover-overlay: color-mix(in srgb, var(--aether-accent) 12%, transparent) !important;
   --input-background: var(--aether-surface) !important;
+  --highlight-bg: color-mix(in srgb, var(--aether-accent) 12%, var(--aether-surface)) !important;
 }
 
 html.aetherbook-theme body {
@@ -21,6 +33,29 @@ html.aetherbook-theme body {
 html.aetherbook-theme body *,
 html.aetherbook-theme body *::before,
 html.aetherbook-theme body *::after {
+  --primary-text: var(--aether-text) !important;
+  --secondary-text: color-mix(in srgb, var(--aether-text) 68%, transparent) !important;
+  --primary-icon: var(--aether-text) !important;
+  --secondary-icon: color-mix(in srgb, var(--aether-text) 68%, transparent) !important;
+  --web-wash: var(--aether-page) !important;
+  --wash: var(--aether-page) !important;
+  --nav-bar-background: var(--aether-surface) !important;
+  --surface-background: var(--aether-surface) !important;
+  --card-background: var(--aether-surface) !important;
+  --dialog-background: var(--aether-surface) !important;
+  --popover-background: var(--aether-surface) !important;
+  --attachment-footer-background: var(--aether-surface) !important;
+  --comment-background: var(--aether-page) !important;
+  --placeholder-text: color-mix(in srgb, var(--aether-text) 62%, transparent) !important;
+  --divider: color-mix(in srgb, var(--aether-text) 16%, transparent) !important;
+  --text-link: var(--aether-accent) !important;
+  --accent: var(--aether-accent) !important;
+  --primary-button-background: var(--aether-accent) !important;
+  --secondary-button-background: var(--aether-surface) !important;
+  --button-background: var(--aether-surface) !important;
+  --hover-overlay: color-mix(in srgb, var(--aether-accent) 12%, transparent) !important;
+  --input-background: var(--aether-surface) !important;
+  --highlight-bg: color-mix(in srgb, var(--aether-accent) 12%, var(--aether-surface)) !important;
   color: var(--aether-text) !important;
   border-color: color-mix(in srgb, var(--aether-text) 18%, transparent) !important;
 }
