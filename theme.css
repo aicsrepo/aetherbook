@@ -30,6 +30,28 @@ html.aetherbook-theme body a {
   color: var(--aether-accent) !important;
 }
 
+html.aetherbook-dark {
+  color-scheme: dark;
+  --primary-text: var(--aether-text) !important;
+  --secondary-text: color-mix(in srgb, var(--aether-text) 70%, transparent) !important;
+  --web-wash: var(--aether-page) !important;
+  --surface-background: var(--aether-surface) !important;
+  --card-background: var(--aether-surface) !important;
+  --comment-background: color-mix(in srgb, var(--aether-surface) 78%, var(--aether-page)) !important;
+  --divider: color-mix(in srgb, var(--aether-text) 18%, transparent) !important;
+  --text-link: var(--aether-accent) !important;
+  --accent: var(--aether-accent) !important;
+  --primary-button-background: var(--aether-accent) !important;
+  --secondary-button-background: var(--aether-surface) !important;
+  --input-background: var(--aether-surface) !important;
+  --placeholder-text: color-mix(in srgb, var(--aether-text) 60%, transparent) !important;
+}
+
+html.aetherbook-dark.aetherbook-theme [role="button"]:hover,
+html.aetherbook-dark.aetherbook-theme button:hover {
+  background-color: color-mix(in srgb, var(--aether-accent) 18%, var(--aether-surface)) !important;
+}
+
 html.aetherbook-theme [role="article"],
 html.aetherbook-theme [role="dialog"],
 html.aetherbook-theme [role="menu"],
@@ -129,6 +151,14 @@ html.aetherbook-nebula body::before {
   content: "";
   pointer-events: none;
   animation: aetherbook-nebula-drift 60s ease-in-out infinite alternate;
+}
+
+html.aetherbook-dark.aetherbook-nebula body::before {
+  background:
+    radial-gradient(ellipse at 18% 30%, color-mix(in srgb, var(--aether-nebula) 36%, #1a1430) 0%, transparent 38%),
+    radial-gradient(ellipse at 78% 68%, color-mix(in srgb, var(--aether-nebula) 34%, #0b1c34) 0%, transparent 43%),
+    radial-gradient(ellipse at 48% 12%, color-mix(in srgb, var(--aether-nebula) 24%, #25182d) 0%, transparent 36%),
+    linear-gradient(135deg, #05060c, #0b0d19 55%, #06070d);
 }
 
 html.aetherbook-nebula [role="main"],

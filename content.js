@@ -44,6 +44,7 @@ function applySettings(settings) {
     root.classList.remove("aetherbook-theme");
     root.classList.remove("aetherbook-twitter");
     root.classList.remove("aetherbook-nebula");
+    root.classList.remove("aetherbook-dark");
     return;
   }
 
@@ -54,6 +55,7 @@ function applySettings(settings) {
   root.classList.add("aetherbook-theme");
   root.classList.toggle("aetherbook-twitter", normalized.preset === "twitter");
   root.classList.toggle("aetherbook-nebula", normalized.nebulaEnabled);
+  root.classList.toggle("aetherbook-dark", normalized.palette.scheme === "dark");
 }
 
 chrome.storage.sync.get(DEFAULT_SETTINGS, applySettings);
