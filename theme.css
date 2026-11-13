@@ -16,6 +16,7 @@ html.aetherbook-theme {
 html.aetherbook-theme body {
   background-color: var(--aether-page) !important;
   color: var(--aether-text) !important;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
 }
 
 html.aetherbook-theme body *,
@@ -71,14 +72,14 @@ html.aetherbook-theme button:hover {
 }
 
 html.aetherbook-twitter body {
-  font-family: Arial, Helvetica, sans-serif !important;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
 }
 
 html.aetherbook-twitter [role="article"],
 html.aetherbook-twitter [data-pagelet^="FeedUnit_"] {
-  border: 0 !important;
+  border: 1px solid color-mix(in srgb, var(--aether-text) 10%, transparent) !important;
   border-bottom: 1px solid color-mix(in srgb, var(--aether-text) 14%, transparent) !important;
-  border-radius: 0 !important;
+  border-radius: 14px !important;
   box-shadow: none !important;
 }
 
@@ -120,14 +121,14 @@ html.aetherbook-nebula body::before {
   z-index: -1;
   inset: -8%;
   background:
-    radial-gradient(ellipse at 18% 30%, color-mix(in srgb, var(--aether-nebula) 75%, #f5c5ff) 0%, transparent 38%),
-    radial-gradient(ellipse at 78% 68%, color-mix(in srgb, var(--aether-nebula) 72%, #112c64) 0%, transparent 43%),
-    radial-gradient(ellipse at 48% 12%, color-mix(in srgb, var(--aether-nebula) 44%, #df5caa) 0%, transparent 36%),
+    radial-gradient(ellipse at 18% 30%, color-mix(in srgb, var(--aether-nebula) 52%, #f5c5ff) 0%, transparent 38%),
+    radial-gradient(ellipse at 78% 68%, color-mix(in srgb, var(--aether-nebula) 52%, #112c64) 0%, transparent 43%),
+    radial-gradient(ellipse at 48% 12%, color-mix(in srgb, var(--aether-nebula) 30%, #df5caa) 0%, transparent 36%),
     linear-gradient(135deg, #080b19, #11152b 55%, #090b18);
   background-size: 150% 150%;
   content: "";
   pointer-events: none;
-  animation: aetherbook-nebula-drift 38s ease-in-out infinite alternate;
+  animation: aetherbook-nebula-drift 60s ease-in-out infinite alternate;
 }
 
 html.aetherbook-nebula [role="main"],
@@ -150,14 +151,33 @@ html.aetherbook-nebula body select,
 html.aetherbook-nebula body [contenteditable="true"],
 html.aetherbook-nebula body [data-pagelet^="FeedUnit_"],
 html.aetherbook-nebula body [data-pagelet="ProfileTimeline"] {
-  background-color: color-mix(in srgb, var(--aether-surface) 86%, transparent) !important;
-  backdrop-filter: blur(12px);
+  background-color: color-mix(in srgb, var(--aether-surface) 95%, transparent) !important;
+  backdrop-filter: blur(16px);
 }
 
 html.aetherbook-nebula body [role="navigation"],
 html.aetherbook-nebula body [role="complementary"] {
-  background-color: color-mix(in srgb, var(--aether-surface) 92%, transparent) !important;
-  backdrop-filter: blur(12px);
+  background-color: color-mix(in srgb, var(--aether-surface) 97%, transparent) !important;
+  backdrop-filter: blur(16px);
+}
+
+html.aetherbook-nebula body [role="article"],
+html.aetherbook-nebula body [role="dialog"],
+html.aetherbook-nebula body [role="menu"],
+html.aetherbook-nebula body [role="listbox"],
+html.aetherbook-nebula body [role="alertdialog"],
+html.aetherbook-nebula body [data-pagelet^="FeedUnit_"],
+html.aetherbook-nebula body [data-pagelet="ProfileTimeline"] {
+  border: 1px solid color-mix(in srgb, var(--aether-text) 10%, transparent) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 8px 26px rgb(3 7 18 / 14%) !important;
+}
+
+html.aetherbook-nebula body input,
+html.aetherbook-nebula body textarea,
+html.aetherbook-nebula body select,
+html.aetherbook-nebula body [contenteditable="true"] {
+  border-radius: 10px !important;
 }
 
 @keyframes aetherbook-nebula-drift {
