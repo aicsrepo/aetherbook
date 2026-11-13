@@ -289,7 +289,66 @@ html.aetherbook-theme a:hover {
   text-underline-offset: 0.15em;
 }
 
+html.aetherbook-futuristic {
+  --aether-grid: color-mix(in srgb, var(--aether-accent) 9%, transparent);
+}
+
+html.aetherbook-futuristic body {
+  position: relative;
+  isolation: isolate;
+}
+
+html.aetherbook-futuristic body::after {
+  position: fixed;
+  z-index: -1;
+  inset: 0;
+  background-image:
+    linear-gradient(var(--aether-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--aether-grid) 1px, transparent 1px);
+  background-size: 48px 48px;
+  content: "";
+  opacity: 0.2;
+  pointer-events: none;
+  mask-image: radial-gradient(ellipse at center, #000 0%, transparent 78%);
+  animation: aetherbook-grid-drift 48s linear infinite;
+}
+
+html.aetherbook-futuristic.aetherbook-theme [role="article"],
+html.aetherbook-futuristic.aetherbook-theme [role="dialog"],
+html.aetherbook-futuristic.aetherbook-theme [role="menu"],
+html.aetherbook-futuristic.aetherbook-theme [role="listbox"],
+html.aetherbook-futuristic.aetherbook-theme [role="alertdialog"],
+html.aetherbook-futuristic.aetherbook-theme [data-pagelet^="FeedUnit_"],
+html.aetherbook-futuristic.aetherbook-theme [data-pagelet="ProfileTimeline"] {
+  background-color: color-mix(in srgb, var(--aether-surface) 90%, transparent) !important;
+  border-color: color-mix(in srgb, var(--aether-accent) 28%, transparent) !important;
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--aether-accent) 6%, transparent),
+    0 12px 32px rgb(0 0 0 / 24%),
+    0 0 24px color-mix(in srgb, var(--aether-accent) 8%, transparent) !important;
+  backdrop-filter: blur(20px);
+}
+
+html.aetherbook-futuristic.aetherbook-theme button:not(:disabled):hover,
+html.aetherbook-futuristic.aetherbook-theme [role="button"]:hover {
+  box-shadow: 0 0 18px color-mix(in srgb, var(--aether-accent) 28%, transparent) !important;
+}
+
+html.aetherbook-futuristic.aetherbook-theme [role="tab"][aria-selected="true"] {
+  box-shadow: 0 0 16px color-mix(in srgb, var(--aether-accent) 22%, transparent) !important;
+}
+
+@keyframes aetherbook-grid-drift {
+  to {
+    background-position: 0 48px, 48px 0;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
+  html.aetherbook-futuristic body::after {
+    animation: none;
+  }
+
   html.aetherbook-theme button,
   html.aetherbook-theme [role="button"],
   html.aetherbook-theme input,

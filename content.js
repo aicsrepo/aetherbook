@@ -31,7 +31,9 @@ function normalizeSettings(settings) {
     nebulaColor: HEX_COLOR.test(settings.nebulaColor)
       ? settings.nebulaColor
       : DEFAULT_SETTINGS.nebulaColor,
-    preset: settings.preset === "twitter" ? "twitter" : "classic",
+    preset: ["twitter", "futuristic"].includes(settings.preset)
+      ? settings.preset
+      : "classic",
     palette: normalizedPalette
   };
 }
@@ -43,6 +45,7 @@ function applySettings(settings) {
   if (!normalized.enabled) {
     root.classList.remove("aetherbook-theme");
     root.classList.remove("aetherbook-twitter");
+    root.classList.remove("aetherbook-futuristic");
     root.classList.remove("aetherbook-nebula");
     root.classList.remove("aetherbook-dark");
     return;
@@ -54,6 +57,7 @@ function applySettings(settings) {
   root.style.setProperty("--aether-nebula", normalized.nebulaColor);
   root.classList.add("aetherbook-theme");
   root.classList.toggle("aetherbook-twitter", normalized.preset === "twitter");
+  root.classList.toggle("aetherbook-futuristic", normalized.preset === "futuristic");
   root.classList.toggle("aetherbook-nebula", normalized.nebulaEnabled);
   root.classList.toggle("aetherbook-dark", normalized.palette.scheme === "dark");
 }

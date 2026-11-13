@@ -13,6 +13,13 @@ const PALETTES = {
     accent: "#1d9bf0",
     scheme: "light"
   },
+  futuristic: {
+    page: "#070b16",
+    surface: "#0d1424",
+    text: "#dcecff",
+    accent: "#56e7ff",
+    scheme: "dark"
+  },
   midnight: {
     page: "#18191a",
     surface: "#242526",
@@ -57,13 +64,16 @@ function showPalette(palette) {
 }
 
 function updateCustomFields() {
-  colorsSection.hidden = !["custom", "twitter"].includes(presetInput.value);
+  colorsSection.hidden = !["custom", "twitter", "futuristic"].includes(presetInput.value);
 }
 
 async function saveSettings() {
   const palette =
-    ["custom", "twitter"].includes(presetInput.value)
-      ? { ...getPaletteFromInputs(), scheme: "light" }
+    ["custom", "twitter", "futuristic"].includes(presetInput.value)
+      ? {
+          ...getPaletteFromInputs(),
+          scheme: presetInput.value === "futuristic" ? "dark" : "light"
+        }
       : PALETTES[presetInput.value];
 
   try {
@@ -95,8 +105,8 @@ async function initialize() {
     nebulaColorInput.value = settings.nebulaColor;
 
     const presetName =
-      settings.preset === "twitter"
-        ? "twitter"
+      ["twitter", "futuristic"].includes(settings.preset)
+        ? settings.preset
         : PALETTES[settings.preset] &&
       COLOR_FIELDS.every(
         (field) => PALETTES[settings.preset][field] === settings.palette[field]
@@ -127,7 +137,7 @@ presetInput.addEventListener("change", () => {
 
 for (const field of COLOR_FIELDS) {
   document.querySelector(`#${field}`).addEventListener("change", () => {
-    if (presetInput.value !== "twitter") {
+    if (!["twitter", "futuristic"].includes(presetInput.value)) {
       presetInput.value = "custom";
     }
     updateCustomFields();
